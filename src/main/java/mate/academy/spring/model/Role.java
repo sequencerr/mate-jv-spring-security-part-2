@@ -8,13 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Getter
-@Setter
-@NoArgsConstructor
 @Entity
 @Table(name = "roles")
 public class Role {
@@ -25,9 +19,33 @@ public class Role {
     @Enumerated(EnumType.STRING)
     private RoleName name;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public RoleName getName() {
+        return name;
+    }
+
+    public void setName(RoleName name) {
+        this.name = name;
+    }
+
     public enum RoleName {
         USER,
         ADMIN
+    }
+
+    @Override
+    public String toString() {
+        return "Role{"
+                + "id=" + id
+                + ", name=" + name
+                + '}';
     }
 }
 
