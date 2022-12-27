@@ -32,7 +32,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         User user = new User();
         user.setEmail(email);
         user.setPassword(password);
-        Role role = roleService.findByName(DEFAULT_ROLE).orElseThrow(() ->
+        Role role = roleService.getByName(DEFAULT_ROLE).orElseThrow(() ->
                 new EntityNotFoundException("Default role " + DEFAULT_ROLE + " not found"));
         user.setRoles(Set.of(role));
         userService.add(user);

@@ -6,5 +6,5 @@ import mate.academy.spring.model.Role;
 public interface RoleService {
     Role add(Role role);
 
-    Optional<Role> findByName(String name);
+    Optional<Role> getByName(String name);
 }
