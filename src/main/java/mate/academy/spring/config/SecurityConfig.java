@@ -1,7 +1,7 @@
 package mate.academy.spring.config;
 
-import static mate.academy.spring.model.Role.RoleName.USER;
 import static mate.academy.spring.model.Role.RoleName.ADMIN;
+import static mate.academy.spring.model.Role.RoleName.USER;
 
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
